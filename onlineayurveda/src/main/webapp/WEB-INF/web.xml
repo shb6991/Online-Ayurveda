@@ -9,7 +9,7 @@
 	<!-- every request must go through this servlet -->
 	<servlet>
 		<servlet-name>dispatcher</servlet-name>
-		<servlet-class>org.springframework.web.servlet.Dispatcherservlet</servlet-class>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 	</servlet>
 
 	<!-- every url must go through this controller -->
