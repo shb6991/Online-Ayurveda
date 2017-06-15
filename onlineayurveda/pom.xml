@@ -17,6 +17,17 @@
 
 	<dependencies>
 
+
+		<!-- Linking with backend -->
+
+		<dependency>
+
+			<groupId>com.bhs</groupId>
+			<artifactId>onlineayurvedaback</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+
+		</dependency>
+
 		<!-- JAVA EE API -->
 		<!-- https://mvnrepository.com/artifact/javax/javaee-api -->
 		<dependency>
