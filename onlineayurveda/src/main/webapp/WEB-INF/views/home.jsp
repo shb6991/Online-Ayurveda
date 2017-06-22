@@ -11,7 +11,9 @@
 						class="icon-bar"></span>
 				</button>
 			</div>
-			<%@include file="./shared/sidebar.jsp"%>
+			<div class = "sidebar">
+				<%@include file="./shared/sidebar.jsp"%>
+			</div>
 			<!-- /.navbar-collapse -->
 		</nav>
 	</div>
@@ -60,7 +62,7 @@
 		</section>
 		<!-- flexSlider -->
 		<link rel="stylesheet" href="${css }/flexslider.css" type="text/css"
-			media="screen" property="" />
+			media="screen" />
 		<script defer src="${js }/jquery.flexslider.js"></script>
 		<script type="text/javascript">
 			$(window).load(function() {

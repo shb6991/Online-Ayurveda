@@ -7,7 +7,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 /*html {
 	height: 100%;
 }*/
-
 body {
 	font-size: 100%;
 	font-family: 'Open Sans', sans-serif;
@@ -217,7 +216,6 @@ ul.dropdown-menu.drp-mnu li a i {
 	/*height: 97px;*/
 	float: left;
 	padding-top: 5%;
-	
 }
 
 .profile_details_drop a {
@@ -1359,7 +1357,13 @@ opacity
 
 
 
+
+
+
+
 :
+
+
 
 
 
@@ -1375,8 +1379,14 @@ opacity
 
 
 
+
+
 0
 .0
+
+
+
+
 
 
 
@@ -1410,7 +1420,13 @@ opacity
 
 
 
+
+
+
+
 :
+
+
 
 
 
@@ -1426,8 +1442,14 @@ opacity
 
 
 
+
+
 1
 .0
+
+
+
+
 
 
 
@@ -1467,7 +1489,13 @@ opacity
 
 
 
+
+
+
+
 :
+
+
 
 
 
@@ -1483,8 +1511,14 @@ opacity
 
 
 
+
+
 0
 .0
+
+
+
+
 
 
 
@@ -1518,7 +1552,13 @@ opacity
 
 
 
+
+
+
+
 :
+
+
 
 
 
@@ -1534,8 +1574,14 @@ opacity
 
 
 
+
+
 1
 .0
+
+
+
+
 
 
 
@@ -1575,7 +1621,13 @@ opacity
 
 
 
+
+
+
+
 :
+
+
 
 
 
@@ -1591,8 +1643,14 @@ opacity
 
 
 
+
+
 0
 .0
+
+
+
+
 
 
 
@@ -1626,7 +1684,13 @@ opacity
 
 
 
+
+
+
+
 :
+
+
 
 
 
@@ -1642,8 +1706,14 @@ opacity
 
 
 
+
+
 1
 .0
+
+
+
+
 
 
 
@@ -5139,7 +5209,13 @@ ul.wmuSliderPagination {
 		background: url(../images/cart.png) no-repeat 105px 5px;
 		font-size: 13px;
 	}
+	
 }
+
+.dataTableImg {
+		width: 100px;
+		height: 100px;
+	}
 
 /*
 .wrapper {

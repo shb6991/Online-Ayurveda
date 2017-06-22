@@ -23,6 +23,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 <script>
 	window.menu = '${title }';
+	window.contextRoot = '${contextRoot}'
 </script>
 
 <!-- for-mobile-apps -->
@@ -32,6 +33,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	content="Grocery Store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript">
+	
+	
+	
+	
+	
+	
 	
 	
 	
@@ -62,10 +69,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 
+
+
+
+
+
+
 </script>
 <!-- //for-mobile-apps -->
 <link href="${css }/bootstrap.css" rel="stylesheet" type="text/css"
 	media="all" />
+
+
+<!-- dataTable Bootstrap -->
+<link href="${css }/dataTable.bootstrap.css" rel="stylesheet"
+	type="text/css" media="all" />
+
 <link href="${css }/myapp.css" rel="stylesheet" type="text/css"
 	media="all" />
 <!-- font-awesome icons -->
@@ -144,10 +163,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</c:if>
 	<!-- //contact -->
 
-	<!-- this will work when list product page will click -->
+	<!-- this will work when list product page will click contact-->
 	<c:if
 		test="${userClickAllProducts==true or userClickCategoryProducts==true}">
 		<%@include file="listProducts.jsp"%>
+	</c:if>
+	<!-- //contact -->
+
+
+	<!-- this will work when user will click show products-->
+	<c:if test="${userClickShowProduct==true}">
+		<%@include file="singleProduct.jsp"%>
 	</c:if>
 	<!-- //contact -->
 
@@ -157,8 +183,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<%@include file="./shared/footer.jsp"%>
 	<!-- //footer -->
 
+	<!-- jquery -->
+
+	<script src="${js}/jquery.js" type="text/javascript"></script>
+
+
 	<!-- Bootstrap Core JavaScript -->
 	<script src="${js }/bootstrap.min.js"></script>
+
+	<!-- DataTable Plugin -->
+	<script src="${js}/jquery.dataTables.js" type="text/javascript"></script>
+
+	<!-- DataTable bootstrap -->
+	<script src="${js}/dataTables.bootstrap.js" type="text/javascript"></script>
+
+	<!-- self created js file  -->
+	<script src="${js }/myapp.js"></script>
+
+
 	<script>
 		$(document).ready(function() {
 			$(".dropdown").hover(function() {
@@ -171,8 +213,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		});
 	</script>
 
-	<!-- self created js file  -->
-	<script src="${js }/myapp.js"></script>
 
 	<!-- here stars scrolling icon -->
 	<script type="text/javascript">
