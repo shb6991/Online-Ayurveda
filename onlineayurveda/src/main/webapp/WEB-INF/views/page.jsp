@@ -21,6 +21,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <head>
 <title>E-Ayurveda - ${title }</title>
 
+
+
 <script>
 	window.menu = '${title }';
 	window.contextRoot = '${contextRoot}'
@@ -33,6 +35,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	content="Grocery Store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript">
+	
+	
+	
+	
+	
+	
 	
 	
 	
@@ -75,10 +83,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 
+
+
+
+
+
+
 </script>
 <!-- //for-mobile-apps -->
 <link href="${css }/bootstrap.css" rel="stylesheet" type="text/css"
 	media="all" />
+
+<link href="${css }/bootstrap.min.css" rel="stylesheet" type="text/css"
+	media="all" />
+
+<link href="${css }/bootstrap-readable-theme.css" rel="stylesheet"
+	type="text/css" media="all" />
+
 
 
 <!-- dataTable Bootstrap -->
