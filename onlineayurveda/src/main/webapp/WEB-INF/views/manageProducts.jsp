@@ -1,3 +1,5 @@
+<%@taglib prefix = "sf" uri = "http://www.springframework.org/tags/form" %>
+
 <div claass="container">
 
 
@@ -17,7 +19,7 @@
 
 					<!-- FORM ELEMENTS -->
 
-					<form class="form-horizontal">
+					<sf:form class="form-horizontal" modelAttribute = "product">
 
 						<div class="form-group">
 
@@ -26,7 +28,7 @@
 
 							<div class="col-md-8">
 
-								<input type="text" name="name" id="name"
+								<sf:input type="text" path="name" id="name"
 									placeholder="Product Name" class="form-control" />
 
 							</div>
@@ -39,7 +41,7 @@
 
 							<div class="col-md-8">
 
-								<input type="text" name="brand" id="brand"
+								<sf:input type="text" path="brand" id="brand"
 									placeholder="Brand Name" class="form-control" />
 
 							</div>
@@ -48,18 +50,86 @@
 
 						<div class="form-group">
 
+							<label class="control-lable col-md-4" for="description">Enter
+								Product Description :</label>
+
+							<div class="col-md-8">
+
+								<sf:textarea path="description" id="description" rows="4"
+									placeholder="Product Description" class="form-control"/>
+
+							</div>
+
+						</div>
+
+						<div class="form-group">
+
+							<label class="control-lable col-md-4" for="unitPrice">Enter
+								Unit Price :</label>
+
+							<div class="col-md-8">
+
+								<sf:input type="number" path="unitPrice" id="unitPrice"
+									placeholder="Unit Price In &#8377;" class="form-control" />
+
+							</div>
+
+						</div>
+
+						<div class="form-group">
+
+							<label class="control-lable col-md-4" for="quantity">Enter
+								Quantity Available :</label>
+
+							<div class="col-md-8">
+
+								<sf:input type="number" path="quantity" id="quantity"
+									placeholder="Quantity Available" class="form-control" />
+
+							</div>
+
+						</div>
+
+						<div class="form-group">
+
+							<label class="control-lable col-md-4" for="categoryId">Select
+								Category :</label>
+
+							<div class="col-md-8">
+								<sf:select class="form-control" id="categoryId" path="categoryId"
+								items = "${categories }"
+								itemLabel="name"
+								itemValue = "id"
+								/> 
+							</div>
+
+						</div>
+
+
+
+						<div class="form-group">
+
 							
 							<div class="col-md-offset-4 col-md-8">
 
 								<input type="submit" name="submit" id="submit"
 									value = "Submit" class="btn btn-primary" />
+									
+									<!-- All Hidden Fields -->
+									<sf:hidden path = "id"/>
+									<sf:hidden path = "code"/>
+									<sf:hidden path = "supplierId"/>
+									<sf:hidden path = "active"/>
+									<sf:hidden path = "purchases"/>
+									<sf:hidden path = "views"/>
+									
 
 							</div>
 
 						</div>
 
 
-					</form>
+					</sf:form>
 
 				</div>
 
