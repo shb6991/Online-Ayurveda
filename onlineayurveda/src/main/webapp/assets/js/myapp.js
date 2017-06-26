@@ -16,6 +16,11 @@ $(function() {
 		$('#listProducts').addClass('active');
 		break;
 
+	case 'manage Products':
+		$('#manageProducts').addClass('active');
+		break;
+
+		
 	default:
 		$('#listProducts').addClass('active');
 		$('#a_' + menu).addClass('active');
