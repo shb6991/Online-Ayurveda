@@ -191,7 +191,7 @@
 
 				<div style="overflow: auto">
 				
-				<table id = "adminProductsTable" class = "table table-striped table-bordered">
+				<table id ="adminProductsTable" class ="table table-striped table-bordered">
 
 					<thead>
 
@@ -200,6 +200,7 @@
 							<th>Id</th>
 							<th>&#160;</th>
 							<th>Name</th>
+							<th>Brand</th>
 							<th>Quantity</th>
 							<th>Unit Price</th>
 							<th>Active</th>
@@ -209,60 +210,6 @@
 
 					</thead>
 
-				<tbody>
-
-					<tr>
-
-						<td>1</td>
-						<td>
-						<img class = "adminDataTableImg" src = "${contextRoot}/resources/images/PRDABC123DEFX.jpg" alt = "Organic India, Chyawanprash" />
-						</td>
-						<td>Organic India, Chyawanprash</td>
-						<td>5</td>
-						<td>&#8377;18000.00</td>
-						<td>
-						<!-- Toggel Switch --> 
-						<label class="switch"> 
-						<input type="checkbox" checked="checked" value = "1"/>
-								<div class="slider">
-								
-								</div>
-						</label>
-						</td>
-						<td>
-						
-						<a href = "${contextRoot}/manage/1/product" class = "btn btn-warning">
-						<span class = "glyphicon glyphicon-pencil"></span>
-						</a>
-						
-						</td>
-
-					</tr>
-
-					<tr>
-
-						<td>1</td>
-						<td><img class="adminDataTableImg"
-							src="${contextRoot}/resources/images/PRDABC123DEFX.jpg"
-							alt="Organic India, Chyawanprash" /></td>
-						<td>Organic India, Chyawanprash</td>
-						<td>5</td>
-						<td>&#8377;18000.00</td>
-						<td>
-							<!-- Toggel Switch --> <label class="switch"> <input
-								type="checkbox"  value="1" />
-								<div class="slider"></div>
-						</label>
-						</td>
-						<td><a href="${contextRoot}/manage/1/product"
-							class="btn btn-warning"> <span
-								class="glyphicon glyphicon-pencil"></span>
-						</a></td>
-
-					</tr>
-
-
-				</tbody>
 
 				<tfoot>
 
@@ -271,6 +218,7 @@
 							<th>Id</th>
 							<th>&#160;</th>
 							<th>Name</th>
+							<th>Brand</th>
 							<th>Quantity</th>
 							<th>Unit Price</th>
 							<th>Active</th>
