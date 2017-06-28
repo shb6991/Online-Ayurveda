@@ -155,5 +155,55 @@ $(function() {
 		} ,3000)
 	}
 	
+	//-------------------------------------------------
+	
+	$('.switch input[type="checkbox"]').on('change', function() {
+		
+		var checkbox = $(this);
+		var checked = checkbox.prop('checked');
+		var dMsg = (checked)? 'Do You Want To Activate This Product?' :
+								'Do You Want To Deactivate This Product?';
+		var value = checkbox.prop('value');
+		
+		bootbox.confirm({
+			
+			size: 'medium',
+			title: 'Product Activation & Deactivation',
+			message: dMsg,
+			callback: function(confirmed){
+				
+				if(confirmed){
+					
+					console.log(value);
+					bootbox.alert({
+						
+						size: 'medium',
+						title: 'Information',
+						message: 'Your Going To Perform Operation On Product' + value
+						
+						
+					});
+					
+				}
+				
+				else{
+					
+					checkbox.prop('checked', !checked);
+					
+				}
+				
+				
+			}
+			
+		});
+		
+		
+	});
+	
+	
+	
+	
+	
+	
 
 });

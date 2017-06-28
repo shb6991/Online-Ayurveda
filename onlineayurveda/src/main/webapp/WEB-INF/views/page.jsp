@@ -18,8 +18,114 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <!DOCTYPE html>
 <html>
+
+
 <head>
 <title>E-Ayurveda - ${title }</title>
+
+
+<style type="text/css">
+/*custom css*/
+.adminDataTableImg {
+	width: 50px;
+	height: 50px;
+}
+
+.switch {
+	width: 50px;
+	height: 30px;
+	position: relative;
+	display: inline-block;
+}
+
+.switch input {
+	display: none;
+}
+
+.slider {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	cursor: pointer;
+	background-color: #ccc;
+	border-radius: 30px;
+	transition: .5s;
+}
+
+.slider:before {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	content: "";
+	bottom: 5px;
+	left: 5px;
+	background-color: #fff;
+	border-radius: 50%;
+	transition: .5s;
+}
+
+input:checked+.slider {
+	background-color: #1863E6;
+}
+
+input:checked+.slider:before {
+	transform: translateX(20px);
+}
+
+.help-block {
+	color: red;
+}
+
+.adminDataTableImg {
+	width: 50px;
+	height: 50px;
+}
+
+.switch {
+	width: 50px;
+	height: 30px;
+	position: relative;
+	display: inline-block;
+}
+
+.switch input {
+	display: none;
+}
+
+.slider {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	cursor: pointer;
+	background-color: #ccc;
+	border-radius: 30px;
+	transition: .5s;
+}
+
+.slider:before {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	content: "";
+	bottom: 5px;
+	left: 5px;
+	background-color: #fff;
+	border-radius: 50%;
+	transition: .5s;
+}
+
+input:checked+.slider {
+	background-color: #1863E6;
+}
+
+input:checked+.slider:before {
+	transform: translateX(20px);
+}
+</style>
 
 
 
@@ -60,24 +166,33 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href="${css }/dataTable.bootstrap.css" rel="stylesheet"
 	type="text/css" media="all" />
 
-<link href="${css }/myapp.css" rel="stylesheet" type="text/css"
-	media="all" />
+
 <!-- font-awesome icons -->
 <link href="${css }/font-awesome.css" rel="stylesheet" type="text/css"
 	media="all" />
 <!-- //font-awesome icons -->
+
+<!-- myapp.css -->
+<link href="${css }/myapp.css" rel="stylesheet" type="text/css" />
+
+
 <!-- js -->
 <script src="${js }/jquery-1.11.1.min.js"></script>
 <!-- //js -->
+
 <link
 	href='//fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,500,500italic,700,700italic'
-	rel='stylesheet' type='text/css'>
+	rel='stylesheet' type='text/css'/>
+
 <link
 	href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic'
-	rel='stylesheet' type='text/css'>
+	rel='stylesheet' type='text/css'/>
+
 <!-- start-smoth-scrolling -->
 <script type="text/javascript" src="js/move-top.js"></script>
+
 <script type="text/javascript" src="js/easing.js"></script>
+
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
 		$(".scroll").click(function(event) {
@@ -89,7 +204,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	});
 </script>
 <!-- start-smoth-scrolling -->
+
 </head>
+
+
 
 <body>
 
@@ -175,6 +293,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 	<!-- DataTable bootstrap -->
 	<script src="${js}/dataTables.bootstrap.js" type="text/javascript"></script>
+	
+	<!-- Bootbox -->
+	<script src="${js}/bootbox.min.js" type="text/javascript"></script>
+	
 
 	<!-- self created js file  -->
 	<script src="${js }/myapp.js"></script>
