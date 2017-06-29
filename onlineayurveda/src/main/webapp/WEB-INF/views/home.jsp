@@ -1,5 +1,6 @@
 
 <div class="banner">
+
 	<div class="w3l_banner_nav_left">
 		<nav class="navbar nav_bottom">
 			<!-- Brand and toggle get grouped for better mobile display -->
@@ -11,6 +12,7 @@
 						class="icon-bar"></span>
 				</button>
 			</div>
+			
 			<div class = "sidebar">
 				<%@include file="./shared/sidebar.jsp"%>
 			</div>
@@ -61,9 +63,9 @@
 			</div>
 		</section>
 		<!-- flexSlider -->
-		<link rel="stylesheet" href="${css }/flexslider.css" type="text/css"
+		<link rel="stylesheet" href="${css}/flexslider.css" type="text/css"
 			media="screen" />
-		<script defer src="${js }/jquery.flexslider.js"></script>
+		<script defer src="${js}/jquery.flexslider.js"></script>
 		<script type="text/javascript">
 			$(window).load(function() {
 				$('.flexslider').flexslider({
@@ -84,7 +86,7 @@
 	<div class="wthree_banner_bottom_left_grid_sub1">
 		<div class="col-md-4 wthree_banner_bottom_left">
 			<div class="wthree_banner_bottom_left_grid">
-				<img src="images/4.jpg" alt=" " class="img-responsive" />
+				<img src=" " alt=" " class="img-responsive" />
 				<div class="wthree_banner_bottom_left_grid_pos">
 					<h4>
 						Discount Offer <span>25%</span>
@@ -94,7 +96,7 @@
 		</div>
 		<div class="col-md-4 wthree_banner_bottom_left">
 			<div class="wthree_banner_bottom_left_grid">
-				<img src="images/5.jpg" alt=" " class="img-responsive" />
+				<img src="${images}/1.jpg" alt=" " class="img-responsive" />
 				<div class="wthree_banner_btm_pos">
 					<h3>
 						introducing <span>best store</span> for <i>groceries</i>

@@ -297,7 +297,8 @@ ul.dropdown-menu.drp-mnu li a i {
 	color:#FA1818;
 }
 .w3l_banner_nav_right_banner1,.w3l_banner_nav_right_banner,.w3l_banner_nav_right_banner2{
-	min-height:500px;
+	min-height: 300px;
+	max-height: 300px;
 	text-align: right;
 	padding:10em 17em 0 0;
 	margin-bottom: 5em;
@@ -4272,6 +4273,7 @@ ul.wmuSliderPagination {
 		font-size: 13px;
 	}
 	
+
 
 	
 }

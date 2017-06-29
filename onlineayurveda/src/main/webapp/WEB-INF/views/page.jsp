@@ -27,6 +27,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <style type="text/css">
 /*custom css*/
 
+.help-block{
+
+color : #ff0000;
+
+}
+
 .dataTableImg{
 
 height: 100px;
@@ -81,14 +87,6 @@ input:checked+.slider {
 input:checked+.slider:before {
 	transform: translateX(20px);
 }
-.help-block {
-	color: red;
-}
-
-.adminDataTableImg {
-	width: 50px;
-	height: 50px;
-}
 
 .switch {
 	width: 50px;
@@ -97,41 +95,6 @@ input:checked+.slider:before {
 	display: inline-block;
 }
 
-.switch input {
-	display: none;
-}
-
-.slider {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	right: 0;
-	left: 0;
-	cursor: pointer;
-	background-color: #ccc;
-	border-radius: 30px;
-	transition: .5s;
-}
-
-.slider:before {
-	position: absolute;
-	width: 20px;
-	height: 20px;
-	content: "";
-	bottom: 5px;
-	left: 5px;
-	background-color: #fff;
-	border-radius: 50%;
-	transition: .5s;
-}
-
-input:checked+.slider {
-	background-color: #1863E6;
-}
-
-input:checked+.slider:before {
-	transform: translateX(20px);
-}
 
 </style>
 
@@ -159,6 +122,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 </script>
+
+
+
 <!-- //for-mobile-apps -->
 <link href="${css}/bootstrap.css" rel="stylesheet" type="text/css"
 	media="all" />
@@ -172,11 +138,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href="${css}/bootstrap-theme.min.css" rel="stylesheet"
 	type="text/css" media="all" />
 
-<!-- dataTable Bootstrap -->
-<link href="${css}/dataTable.bootstrap.css" rel="stylesheet"
-	type="text/css" media="all" />
-
-
 
 <!-- font-awesome icons -->
 <link href="${css}/font-awesome.css" rel="stylesheet" type="text/css"
@@ -186,7 +147,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- myapp.css -->
 <link href="${css}/myapp.css" rel="stylesheet" type="text/css" />
 
-
+<!-- dataTable Bootstrap -->
+<link href="${css}/dataTables.bootstrap.css" rel="stylesheet"
+	type="text/css" media="all" />
 <!-- js -->
 <script src="${js}/jquery-1.11.1.min.js"></script>
 <!-- //js -->
@@ -224,8 +187,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <body>
 
-
-
 	<!-- header and navbar is loading -->
 	<%@include file="./shared/navbar.jsp"%>
 	<!-- //header and navbar -->
@@ -233,11 +194,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!-- page content -->
 
 
-	<!-- home page loading -->
+	<!-- home page loading--> 
 	<c:if test="${userClickHome==true }">
-		<%@include file="home.jsp"%>
+	 <%@include file="home.jsp"%>
 	</c:if>
-	
 	
 	<!-- //home -->
 
