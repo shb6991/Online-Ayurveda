@@ -8,7 +8,7 @@
 <spring:url var="js" value="/resources/js" />
 <spring:url var="images" value="/resources/images" />
 
-<c:set var="contextRoot" value="${pageContext.request.contextPath }" />
+<c:set var="contextRoot" value="${pageContext.request.contextPath}" />
 
 <!--
 author: W3layouts
@@ -21,11 +21,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 
 <head>
-<title>E-Ayurveda - ${title }</title>
+<title>E-Ayurveda - ${title}</title>
 
 
 <style type="text/css">
 /*custom css*/
+
+.dataTableImg{
+
+height: 100px;
+width: 100px;
+
+}
+
 .adminDataTableImg {
 	width: 50px;
 	height: 50px;
@@ -73,7 +81,6 @@ input:checked+.slider {
 input:checked+.slider:before {
 	transform: translateX(20px);
 }
-
 .help-block {
 	color: red;
 }
@@ -125,12 +132,14 @@ input:checked+.slider {
 input:checked+.slider:before {
 	transform: translateX(20px);
 }
+
 </style>
 
 
 
+
 <script>
-	window.menu = '${title }';
+	window.menu = '${title}';
 	window.contextRoot = '${contextRoot}'
 </script>
 
@@ -151,33 +160,35 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 </script>
 <!-- //for-mobile-apps -->
-<link href="${css }/bootstrap.css" rel="stylesheet" type="text/css"
+<link href="${css}/bootstrap.css" rel="stylesheet" type="text/css"
 	media="all" />
 
-<link href="${css }/bootstrap.min.css" rel="stylesheet" type="text/css"
+<link href="${css}/bootstrap.min.css" rel="stylesheet" type="text/css"
 	media="all" />
 
-<link href="${css }/bootstrap-readable-theme.css" rel="stylesheet"
+<link href="${css}/bootstrap-theme.css" rel="stylesheet"
 	type="text/css" media="all" />
 
-
+<link href="${css}/bootstrap-theme.min.css" rel="stylesheet"
+	type="text/css" media="all" />
 
 <!-- dataTable Bootstrap -->
-<link href="${css }/dataTable.bootstrap.css" rel="stylesheet"
+<link href="${css}/dataTable.bootstrap.css" rel="stylesheet"
 	type="text/css" media="all" />
+
 
 
 <!-- font-awesome icons -->
-<link href="${css }/font-awesome.css" rel="stylesheet" type="text/css"
+<link href="${css}/font-awesome.css" rel="stylesheet" type="text/css"
 	media="all" />
 <!-- //font-awesome icons -->
 
 <!-- myapp.css -->
-<link href="${css }/myapp.css" rel="stylesheet" type="text/css" />
+<link href="${css}/myapp.css" rel="stylesheet" type="text/css" />
 
 
 <!-- js -->
-<script src="${js }/jquery-1.11.1.min.js"></script>
+<script src="${js}/jquery-1.11.1.min.js"></script>
 <!-- //js -->
 
 <link
@@ -189,9 +200,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	rel='stylesheet' type='text/css'/>
 
 <!-- start-smoth-scrolling -->
-<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="${js}/move-top.js"></script>
 
-<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript" src="${js}/easing.js"></script>
 
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
@@ -205,6 +216,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </script>
 <!-- start-smoth-scrolling -->
 
+
+
 </head>
 
 
@@ -212,25 +225,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <body>
 
 
-	<!-- script-for sticky-nav -->
-	<script>
-		$(document).ready(function() {
-			var navoffeset = $(".agileits_header").offset().top;
-			$(window).scroll(function() {
-				var scrollpos = $(window).scrollTop();
-				if (scrollpos >= navoffeset) {
-					$(".agileits_header").addClass("fixed");
-				} else {
-					$(".agileits_header").removeClass("fixed");
-				}
-			});
 
-		});
-	</script>
-
-
-
-	<!-- //script-for sticky-nav -->
 	<!-- header and navbar is loading -->
 	<%@include file="./shared/navbar.jsp"%>
 	<!-- //header and navbar -->
@@ -242,6 +237,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<c:if test="${userClickHome==true }">
 		<%@include file="home.jsp"%>
 	</c:if>
+	
+	
 	<!-- //home -->
 
 	<!-- this will work when about us page will click -->
@@ -286,7 +283,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 	<!-- Bootstrap Core JavaScript -->
-	<script src="${js }/bootstrap.min.js"></script>
+	<script src="${js}/bootstrap.min.js"></script>
 
 	<!-- DataTable Plugin -->
 	<script src="${js}/jquery.dataTables.js" type="text/javascript"></script>
@@ -299,8 +296,28 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	
 
 	<!-- self created js file  -->
-	<script src="${js }/myapp.js"></script>
+	<script src="${js}/myapp.js"></script>
 
+
+	<!-- script-for sticky-nav -->
+	<script>
+		$(document).ready(function() {
+			var navoffeset = $(".agileits_header").offset().top;
+			$(window).scroll(function() {
+				var scrollpos = $(window).scrollTop();
+				if (scrollpos >= navoffeset) {
+					$(".agileits_header").addClass("fixed");
+				} else {
+					$(".agileits_header").removeClass("fixed");
+				}
+			});
+
+		});
+	</script>
+
+
+
+	<!-- //script-for sticky-nav -->
 
 	<script>
 		$(document).ready(function() {
@@ -334,7 +351,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		});
 	</script>
 	<!-- //here ends scrolling icon -->
-	<script src="js/minicart.min.js"></script>
+	<script src="${js}/minicart.min.js"></script>
 	<script>
 		// Mini Cart
 		paypal.minicart.render({

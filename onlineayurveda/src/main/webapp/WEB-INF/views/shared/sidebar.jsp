@@ -1,7 +1,8 @@
 
 <!-- Collect the nav links, forms, and other content for toggling -->
-<div class="list-roup">
 
+<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
+<ul class="nav navbar-nav nav_1">
 	<c:forEach items="${categories }" var="category">
 
 		<li><a
@@ -9,7 +10,8 @@
 			class="list-grroup-item" id="a_${category.name }">${category.name}</a></li>
 
 	</c:forEach>
-
+	</ul>
+</div>
 
 	<!--  <li><a href="#">Branded Foods</a></li> -->
 
@@ -51,6 +53,3 @@
 				</div>
 			</div></li>
 		<li><a href="bread.html">Bread & Bakery</a></li> -->
-
-
-</div>

@@ -8,7 +8,7 @@
 			<input type="text" name="Product" value="Search a product..."
 				onfocus="this.value = '';"
 				onblur="if (this.value == '') {this.value = 'Search a product...';}"
-				required=""> <input type="submit" value=" ">
+				> <input type="submit" value=" ">
 		</form>
 	</div>
 	<div class="product_list_header">
@@ -37,7 +37,7 @@
 	</div>
 	<div class="w3l_header_right1">
 		<h2 id="contact">
-			<a href="${contextRoot }/contact">Contact Us</a>
+			<a href="${contextRoot}/contact">Contact Us</a>
 		</h2>
 	</div>
 	<div class="clearfix"></div>
@@ -49,7 +49,7 @@
 	<div class="container">
 		<div class="w3ls_logo_products_left">
 			<h1>
-				<a href="${contextRoot }/home"><span>Swasthyam</span> Ayurveda</a>
+				<a href="${contextRoot}/home"><span>Swasthyam</span> Ayurveda</a>
 			</h1>
 		</div>
 		<div class="w3ls_logo_products_left1">
@@ -58,10 +58,10 @@
 				<li id="about"><a href="${contextRoot }/about">About Us</a><i>/</i></li>
 				<li><a href="products.html">Best Deals</a><i>/</i></li>
 				<li id="listProduct"><a
-					href="${contextRoot }/show/all/products">View Products</a><i>/</i></li>
+					href="${contextRoot}/show/all/products">View Products</a><i>/</i></li>
 
 				<li id="manageProducts"><a
-					href="${contextRoot }/manage/products">Manage products</a></li>
+					href="${contextRoot}/manage/products">Manage products</a></li>
 			</ul>
 		</div>
 		<div class="w3ls_logo_products_left1">
