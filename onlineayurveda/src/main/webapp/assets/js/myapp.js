@@ -349,10 +349,66 @@ $(function() {
 		//----------------------------
 		
 		
-		
+		//-------------------------------
+		//validation for category
+		//-------------------------------
 
-	
-	
+		var $categoryForm = $('#categoryForm');
+		
+		if($categoryForm.length){
+			
+			
+			$categoryForm.validate({
+				
+				rules : {
+					
+					name : {
+						
+						required : true,
+						minlength : 2
+						
+					},
+					
+					
+					description : {
+						
+						required : true
+					}
+					
+				},
+				
+				messages : {
+					
+					name : {
+						
+						required : 'Please Add The Category Name.',
+						minlength : 'The Category Name Should Not Be Less Than 2 Characters.'
+						
+					},
+					
+					description : {
+						
+						required : 'Please Add The Description For Category.',
+						
+					}
+				},
+				
+				errorElement : 'em',
+				errorPlacement : function(error, element){
+					
+					//add the class of help-block
+					error.addClass('help-block');
+					//add error element after the input element
+					error.insertAfter(element);
+				}
+				
+				
+			});
+			
+			
+		}
+		
+		//--------------------------------
 	
 	
 	

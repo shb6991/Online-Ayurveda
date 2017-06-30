@@ -27,11 +27,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <style type="text/css">
 /*custom css*/
 
-.help-block{
 
-color : #ff0000;
-
-}
 
 .dataTableImg{
 
@@ -238,8 +234,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!-- //footer -->
 
 	<!-- jquery -->
-
 	<script src="${js}/jquery.js" type="text/javascript"></script>
+	
+	<!-- JQuery validator -->
+	<script src="${js}/jquery.validate.js" type="text/javascript"></script>
 
 
 	<!-- Bootstrap Core JavaScript -->
@@ -253,6 +251,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	
 	<!-- Bootbox -->
 	<script src="${js}/bootbox.min.js" type="text/javascript"></script>
+	
 	
 
 	<!-- self created js file  -->
