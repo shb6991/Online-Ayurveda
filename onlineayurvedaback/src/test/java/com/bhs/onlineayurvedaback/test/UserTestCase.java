@@ -28,65 +28,113 @@ public class UserTestCase {
 		userDAO = (UserDAO) context.getBean("userDAO");
 	}
 	
+//	@Test
+//	public void testAdd(){
+//		
+//		user = new User() ;
+//		user.setFirstName("Hrithik");
+//		user.setLastName("Roshan");
+//		user.setEmail("hr@gmail.com");
+//		user.setContactNumber("1234512345");
+//		user.setRole("USER");
+//		user.setPassword("123456");
+//		
+//		//add user
+//		assertEquals("Failed To Add User", true, userDAO.addUser(user));
+//		
+//		address = new Address();
+//		address.setAddressLineOne("101/B Jadoo Society, Krissh Nagar");
+//		address.setAddressLineTwo("Near Kaabil Store");
+//		address.setCity("Mumbai");
+//		address.setState("Maharashtra");
+//		address.setCountry("India");
+//		address.setPostalCode("400001");
+//		address.setBilling(true);
+//		
+//		//link user with the address using user id
+//		address.setUserId(user.getId());
+//
+//		//add user
+//		assertEquals("Failed To Add Address", true, userDAO.addAddress(address));
+//		
+//		if(user.getRole().equals("USER")){
+//			
+//			//create caert for this user
+//			cart = new Cart();
+//			cart.setUser(user);
+//			
+//			//add cart
+//			assertEquals("Failed To Add Cart", true, userDAO.addCart(cart));
+//
+//			
+//			//add a shipping address for this user
+//			address = new Address();
+//			address.setAddressLineOne("201/B Jadoo Society, Kishan Kanhaiya Nagar");
+//			address.setAddressLineTwo("Near Kudrat Store");
+//			address.setCity("Mumbai");
+//			address.setState("Maharashtra");
+//			address.setCountry("India");
+//			address.setPostalCode("400001");
+//			// set shipping to true
+//			address.setShipping(true);
+//			
+//			//link it with the user
+//			address.setUserId(user.getId());
+//			
+//			//add shipping address
+//			assertEquals("Failed To Add Shipping Address", true, userDAO.addAddress(address));
+//
+//			
+//		}
+//
+//	}
+	
+	
+//	@Test
+//	public void testAdd(){
+//		
+//		user = new User() ;
+//		user.setFirstName("Hrithik");
+//		user.setLastName("Roshan");
+//		user.setEmail("hr@gmail.com");
+//		user.setContactNumber("1234512345");
+//		user.setRole("USER");
+//		user.setPassword("123456");
+//		
+//		if(user.getRole().equals("USER")){
+//			
+//			//create caert for this user
+//			cart = new Cart();
+//			cart.setUser(user);
+//			
+//			//attach cart with the user
+//			
+//			user.setCart(cart);
+//			
+//		}
+//		
+//		//add user
+//		assertEquals("Failed To Add User", true, userDAO.addUser(user));
+//
+//	}
+
 	@Test
-	public void testAdd(){
+	public void testUpdateCart(){
+		//fetch user by its email
+		user = userDAO.getByEmail("hr@gmail.com");
 		
-		user = new User() ;
-		user.setFirstName("Hrithik");
-		user.setLastName("Roshan");
-		user.setEmail("hr@gmail.com");
-		user.setContactNumber("1234512345");
-		user.setRole("USER");
-		user.setPassword("123456");
+		//get the cart for the user
+		cart = user.getCart();
 		
-		//add user
-		assertEquals("Failed To Add User", true, userDAO.addUser(user));
+		cart.setGrandTotal(5555);
 		
-		address = new Address();
-		address.setAddressLineOne("101/B Jadoo Society, Krissh Nagar");
-		address.setAddressLineTwo("Near Kaabil Store");
-		address.setCity("Mumbai");
-		address.setState("Maharashtra");
-		address.setCountry("India");
-		address.setPostalCode("400001");
-		address.setBilling(true);
+		cart.setCartLines(2);
 		
-		//link user with the address using user id
-		address.setUserId(user.getId());
-
-		//add user
-		assertEquals("Failed To Add Address", true, userDAO.addAddress(address));
+		assertEquals("failed to update the cart", true, userDAO.updateCart(cart));
 		
-		if(user.getRole().equals("USER")){
-			
-			//create caert for this user
-			cart = new Cart();
-			cart.setUser(user);
-			
-			//add cart
-			assertEquals("Failed To Add Cart", true, userDAO.addCart(cart));
-
-			
-			//add a shipping address for this user
-			address = new Address();
-			address.setAddressLineOne("201/B Jadoo Society, Kishan Kanhaiya Nagar");
-			address.setAddressLineTwo("Near Kudrat Store");
-			address.setCity("Mumbai");
-			address.setState("Maharashtra");
-			address.setCountry("India");
-			address.setPostalCode("400001");
-			// set shipping to true
-			address.setShipping(true);
-			
-			//link it with the user
-			address.setUserId(user.getId());
-			
-			//add shipping address
-			assertEquals("Failed To Add Shipping Address", true, userDAO.addAddress(address));
-
-			
-		}
-
+		
 	}
+	
+	
 	
 }
