@@ -25,8 +25,24 @@
 					<div class="mega-dropdown-menu">
 						<div class="w3ls_vegetables">
 							<ul class="dropdown-menu drp-mnu">
-								<li><a href="login.html">Login</a></li> 
-								<li><a href="login.html">Sign Up</a></li>
+								
+								<!-- LOGIN -->
+								
+								<li id = "login">
+								
+								<a href = "${contextRoot}/login">Login</a>
+								
+								</li> 
+								
+								<!-- SIGNUP -->
+								
+								<li id = "register">
+								
+								<a href = "${contextRoot}/register">Sign Up</a>
+								
+								</li>
+								
+								
 							</ul>
 						</div>                  
 					</div>	
