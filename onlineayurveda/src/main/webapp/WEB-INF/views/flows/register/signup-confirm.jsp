@@ -12,7 +12,7 @@
 				</div>
 				<div class="panel-body">
 
-				<!-- 	<div class="text-center">
+				 	<div class="text-center">
 
 						<h4>${registerModel.user.firstName}
 							${registerModel.user.lastName}</h4>
@@ -23,7 +23,7 @@
 
 						<h5>Role: ${registerModel.user.role}</h5>
 
-					</div>-->
+					</div>
 
 
 				</div>
@@ -44,14 +44,14 @@
 					<h4>Billing Address</h4>
 				</div>
 				<div class="panel-body">
-				<!-- 	<div class="text-center">
+				 	<div class="text-center">
 						<h4>${registerModel.billing.addressLineOne}</h4>
 						<h4>${registerModel.billing.addressLineTwo}</h4>
 						<h4>${registerModel.billing.city}-
 							${registerModel.billing.postalCode}</h4>
 						<h4>${registerModel.billing.state}-
 							${registerModel.billing.country}</h4>
-					</div> -->
+					</div> 
 				</div>
 				<div class="panel-footer">
 					<!-- anchor to move to the edit of address -->
@@ -70,7 +70,7 @@
 
 			<div class="text-center">
 
-				<a href="${flowExecutionUrl}&_eventId_success"
+				<a href="${flowExecutionUrl}&_eventId_submit"
 					class="btn btn-primary">Confirm</a>
 
 			</div> 
