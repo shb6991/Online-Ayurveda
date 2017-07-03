@@ -1,5 +1,7 @@
 package com.bhs.onlineayurvedaback.dto;
 
+import java.io.Serializable;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,13 +13,17 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "user_detail")
-public class User {
+public class User implements Serializable{
 	
 	/*
 	 * private fields for user
 	 * 
 	 * */
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
