@@ -3,6 +3,8 @@ package com.bhs.com.bhs.handler;
 import java.io.Serializable;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.binding.message.MessageBuilder;
+import org.springframework.binding.message.MessageContext;
 import org.springframework.stereotype.Component;
 
 import com.bhs.com.bhs.model.RegisterModel;
@@ -38,6 +40,36 @@ public class RegisterHandler implements Serializable{
 	public void addBilling(RegisterModel registerModel, Address billing){
 		
 		registerModel.setBilling(billing);
+	}
+	
+	
+	public String validateUser(User user, MessageContext error) {
+		
+		String transitionValue = "success";
+		
+		//confirming password  with the password
+		if(!(user.getPassword().equals(user.getConfirmPassword()))){
+			error.addMessage(new MessageBuilder().error().source("confirmPassword").defaultText("password does not matched").build());
+			
+			
+			transitionValue = "failure";
+		}
+		
+		//checking uniqueness
+		
+		if(userDAO.getByEmail(user.getEmail())!=null) {
+			
+			error.addMessage(new MessageBuilder().error().source("email").defaultText("email is already exist").build());
+			
+			transitionValue = "failure";
+		}
+		
+		
+		
+		
+		
+		return transitionValue;
+		
 	}
 	
 	public String saveAll(RegisterModel model) {
