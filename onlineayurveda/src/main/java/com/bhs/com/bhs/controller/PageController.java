@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.bhs.com.bhs.exception.ProductNotFoundException;
@@ -165,15 +166,24 @@ public class PageController {
 
 	}
 	
-	/*login*/
-	@RequestMapping(value = "/login")
-	public ModelAndView login() {
+	/* login */
+	@RequestMapping(value = "login")
+	public ModelAndView login(@RequestParam(name = "error", required = false) String error) 
+	{
 		ModelAndView mv = new ModelAndView("login");
 
+		if(error!=null){
+			mv.addObject("message", "Invalid Username And Password");
+		}
+		
 		mv.addObject("title", "Login");
 		
 		return mv;
 	}
 
+
+	
+	
+	
 
 }

@@ -199,16 +199,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="content">
 
 			<div class="container">
-				<%-- this will be displayed if the credentials are wrong --%>
+			
+				<c:if test="${not empty message}">
+					<%-- this will be displayed if the credentials are wrong --%>
 
-				<div class="row">
+					<div class="row">
 
-					<div class="col-md-offset-3 col-md-6">
+						<div class="col-md-offset-3 col-md-6">
 
-						<div class="alert alert-danger">${message}</div>
+							<div class="alert alert-danger">${message}</div>
 
+						</div>
 					</div>
-				</div>
+				</c:if>
 
 
 				<%-- this will be displayed only when user has logged out --%>
@@ -257,8 +260,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<div class="form-group">
 										<div class="col-md-offset-4 col-md-8">
 											<input type="submit" value="Login" class="btn btn-primary" />
-											<!-- <input type="hidden" name="${_csrf.parameterName}"
-												value="${_csrf.token}" /> -->
+											 <input type="hidden" name="${_csrf.parameterName}"
+												value="${_csrf.token}" /> 
 										</div>
 									</div>
 								</form>

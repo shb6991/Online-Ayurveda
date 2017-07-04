@@ -26,7 +26,23 @@ $(function() {
 		$('#a_' + menu).addClass('active');
 		break;
 	}
-
+	
+	//to tackle csrf token
+	
+	var token = $('meta[name="_csrf"]').attr('content');
+	
+	var header = $('meta[name="_csrf_header"]').attr('content');
+	
+	if(token.length > 0 && header.length > 0) {
+		
+		//set the token for the ajax request
+		$(document).ajaxSend(function(e, xhr, options) {
+			
+			xhr.setRequestHeader(header,token);
+		});
+		
+	}
+	
 	// code for jquery datTable
 
 	var $table = $('#productListTable');
