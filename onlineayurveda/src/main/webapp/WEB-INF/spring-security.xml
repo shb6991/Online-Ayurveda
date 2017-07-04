@@ -10,10 +10,13 @@ xsi:schemaLocation="http://www.springframework.org/schema/beans
 		http://www.springframework.org/schema/security/spring-security.xsd">
 		
 		<context:component-scan base-package="com.bhs.onlineayurvedaback"/>
+		
+		<http pattern="/resources/**" security="none"/> 
 
 	<http>
+	    <intercept-url pattern="/login" access="permitAll" />
 		<intercept-url pattern="/**" access="hasAuthority('USER')" />
-		<form-login />
+		<form-login login-page="/login"/>
 		<logout />
 	</http>
 	

@@ -410,7 +410,72 @@ $(function() {
 		
 		//--------------------------------
 	
-	
+
+		//-------------------------------
+		//validation for loginForm
+		//-------------------------------
+
+		var $loginForm = $('#loginForm');
+		
+		if($loginForm.length){
+			
+			
+			$loginForm.validate({
+				
+				rules : {
+					
+					username : {
+						
+						required : true,
+						email : true
+						
+					},
+					
+					
+					password : {
+						
+						required : true
+					}
+					
+				},
+				
+				messages : {
+					
+					username : {
+						
+						required : 'Please Enter The User Name.',
+						email : 'Please Enter Valid email Address'
+						
+					},
+					
+					password : {
+						
+						required : 'Please Enter The Password.',
+						
+					}
+				},
+				
+				errorElement : 'em',
+				errorPlacement : function(error, element){
+					
+					//add the class of help-block
+					error.addClass('help-block');
+					//add error element after the input element
+					error.insertAfter(element);
+				}
+				
+				
+			});
+			
+			
+		}
+		
+		//--------------------------------
+		
+		
+		
+		
+		
 	
 	
 
