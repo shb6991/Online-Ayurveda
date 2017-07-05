@@ -1,15 +1,14 @@
 <!-- header -->
 	<div class="agileits_header">
-		<div class="w3l_offers">
-			<a href="products.html">Today's special Offers !</a>
-		</div>
-		<div class="w3l_search">
+ 		<div class="w3l_search">
 			<form action="#" method="post">
-				<input type="text" name="Product" value="Search a product..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search a product...';}" required="">
+				<input type="text" name="Product" value="Search a product..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search a product...';}">
 				<input type="submit" value=" ">
 			</form>
-		</div>
-		<div class="product_list_header">  
+		</div>	
+ 	
+	
+<!-- 	<div class="product_list_header">  
 			<form action="#" method="post" class="last">
                 <fieldset>
                     <input type="hidden" name="cmd" value="_cart" />
@@ -17,7 +16,47 @@
                     <input type="submit" name="submit" value="View your cart" class="button" />
                 </fieldset>
             </form>
+		</div>   -->
+		
+		<div class="product_list_header float-right">
+		<ul>
+		<li class = "dropdown">
+		
+		<a href = "javascript:void(0)" class = "btn btn-warning btn-lg dropdown-toggle" id = "dropdownMenu1" data-toggle = "dropdown">
+		
+		${userModel.fullName} 
+		<span class = "caret"></span>
+		
+		</a>
+		
+		<ul class = "dropdown-menu">
+		
+		<li>
+		
+		<a href = "${contextRoot}/cart">
+		
+		<span class ="glyphicon glyphicon-shopping-cart"></span>
+		<span class = "badge">${userModel.cart.cartLines}</span>
+		- &#8377; ${userModel.cart.grandTotal} 
+		
+		</a>
+		
+		</li>
+		
+		<li class = "divider" role = "separator"></li>
+		
+		<li>
+		
+		<a href = "${contextRoot}/logout">Logout</a>
+		
+		</li>
+		
+		</ul>
+		
+		</li>
+		</ul>
 		</div>
+		
 		<div class="w3l_header_right">
 			<ul>
 				<li class="dropdown profile_details_drop">
@@ -40,9 +79,7 @@
 								
 								<a href = "${contextRoot}/register">Sign Up</a>
 								
-								</li>
-								
-								
+									
 							</ul>
 						</div>                  
 					</div>	
