@@ -33,7 +33,7 @@ CREATE TABLE user_detail (
 	last_name VARCHAR(50),
 	role VARCHAR(50),
 	enabled BOOLEAN,
-	password VARCHAR(50),
+	password VARCHAR(60),
 	email VARCHAR(100),
 	contact_number VARCHAR(15),	
 	CONSTRAINT pk_user_id PRIMARY KEY(id),
@@ -41,15 +41,15 @@ CREATE TABLE user_detail (
 
 INSERT INTO user_detail 
 (first_name, last_name, role, enabled, password, email, contact_number) 
-VALUES ('Virat', 'Kohli', 'ADMIN', true, 'admin', 'vk@gmail.com', '8888888888');
+VALUES ('Bhavesh', 'Sonawane', 'ADMIN', true, '$2a$06$dyn/YVjlkeJSS/6mGZsoO.wRb.RrvkAiLRUa.7ByN3VX4FFai96Yi', 'bsonawane118@gmail.com', '8692938530');
 
 INSERT INTO user_detail 
 (first_name, last_name, role, enabled, password, email, contact_number) 
-VALUES ('Ravindra', 'Jadeja', 'SUPPLIER', true, '12345', 'rj@gmail.com', '9999999999');
+VALUES ('Ravindra', 'Jadeja', 'SUPPLIER', true, '$2a$06$XUq/dV209cfWsUIfblX65OttR5xdR/kr97D1tIoikxRmvnSNbip8W', 'rj@gmail.com', '9999999999');
 
 INSERT INTO user_detail 
 (first_name, last_name, role, enabled, password, email, contact_number) 
-VALUES ('Ravichandra', 'Ashwin', 'SUPPLIER', true, '12345', 'ra@gmail.com', '7777777777');
+VALUES ('Ravichandra', 'Ashwin', 'SUPPLIER', true, '$2a$06$/tlxC44HhmaaxoQc26A.jeUmJuDjvaOZS3gfJTIUsjVpBjkpGG3ku', 'ra@gmail.com', '7777777777');
 
 
 CREATE TABLE product (
