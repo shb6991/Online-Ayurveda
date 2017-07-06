@@ -1,3 +1,5 @@
+<%@taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
+
 <!-- header -->
 	<div class="agileits_header">
  		<div class="w3l_search">
@@ -18,8 +20,10 @@
             </form>
 		</div>   -->
 		
+		<security:authorize access="isAuthenticated()">
 		<div class="product_list_header float-right">
 		<ul>
+		
 		<li class = "dropdown">
 		
 		<a href = "javascript:void(0)" class = "btn btn-warning btn-lg dropdown-toggle" id = "dropdownMenu1" data-toggle = "dropdown">
@@ -31,6 +35,7 @@
 		
 		<ul class = "dropdown-menu">
 		
+		<security:authorize access="hasAuthority('USER')">
 		<li>
 		
 		<a href = "${contextRoot}/cart">
@@ -43,6 +48,8 @@
 		
 		</li>
 		
+		</security:authorize>
+		
 		<li class = "divider" role = "separator"></li>
 		
 		<li>
@@ -54,9 +61,13 @@
 		</ul>
 		
 		</li>
-		</ul>
-		</div>
 		
+		</ul>
+
+		</div>
+		</security:authorize>
+		
+		<security:authorize access="isAnonymous()">
 		<div class="w3l_header_right">
 			<ul>
 				<li class="dropdown profile_details_drop">
@@ -64,28 +75,25 @@
 					<div class="mega-dropdown-menu">
 						<div class="w3ls_vegetables">
 							<ul class="dropdown-menu drp-mnu">
-								
-								<!-- LOGIN -->
-								
-								<li id = "login">
-								
-								<a href = "${contextRoot}/login">Login</a>
-								
-								</li> 
-								
+
+							<!-- LOGIN -->
+							
+								<li id="login"><a href="${contextRoot}/login">Login</a></li>
+
 								<!-- SIGNUP -->
-								
-								<li id = "register">
-								
-								<a href = "${contextRoot}/register">Sign Up</a>
-								
-									
-							</ul>
+
+								<li id="register"><a href="${contextRoot}/register">Sign
+										Up</a></li>
+							
+
+						</ul>
 						</div>                  
 					</div>	
 				</li>
 			</ul>
 		</div>
+		</security:authorize>
+		
 		<div class="w3l_header_right1">
 			<h2><a href="mail.html">Contact Us</a></h2>
 		</div>
@@ -120,10 +128,14 @@
 				<li id="about"><a href="${contextRoot }/about">About Us</a><i>/</i></li>
 				<li><a href="products.html">Best Deals</a><i>/</i></li>
 				<li id="listProduct"><a
-					href="${contextRoot}/show/all/products">View Products</a><i>/</i></li>
+					href="${contextRoot}/show/all/products">View Products</a></li>
 
-				<li id="manageProducts"><a
-					href="${contextRoot}/manage/products">Manage products</a></li>
+				<security:authorize access="hasAuthority('ADMIN')">
+				<li id="manageProducts"><i>/</i><a
+					href="${contextRoot}/manage/products">Manage products</a>
+				</li>
+				</security:authorize>
+				
 			</ul>
 		</div>
 		<div class="w3ls_logo_products_left1">
@@ -137,3 +149,14 @@
 		<div class="clearfix"></div>
 	</div>
 </div>
+
+<script>
+
+
+window.userRole = '${userModel.role}';
+
+</script>
+
+
+
+
