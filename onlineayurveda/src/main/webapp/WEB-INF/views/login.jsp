@@ -212,20 +212,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</div>
 					</div>
 				</c:if>
+				
+				<%-- this will be displayed only if user logged out--%>
+				<c:if test="${not empty logout}">
+					
 
+					<div class="row">
 
-				<%-- this will be displayed only when user has logged out --%>
+						<div class="col-md-offset-3 col-md-6">
 
-				<div class="row">
+							<div class="alert alert-success">${logout}</div>
 
-					<div class="col-md-offset-3 col-md-6">
-
-						<div class="alert alert-success">${logout}</div>
-
+						</div>
 					</div>
-				</div>
-
-
+				</c:if>
 
 
 				<div class="row">
