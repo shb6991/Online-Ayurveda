@@ -1,4 +1,4 @@
-<div class="container">
+	<div class="container">
 	<div class="row">
 
 		<!-- to display sidebar -->
@@ -53,8 +53,12 @@
 
 				
 					<div class="col-xs-12">
-
-						<table id="productListTable">
+					
+					<div class = "container-fluid">
+					
+					 <div class = "table-responsive">
+					 
+					 						<table id="productListTable" class = "table table-striped table-borderd">
 
 
 							<thead>
@@ -85,6 +89,13 @@
 
 
 						</table>
+					  
+					 
+					 </div>
+					
+					</div> 	
+
+
 
 					</div>
 

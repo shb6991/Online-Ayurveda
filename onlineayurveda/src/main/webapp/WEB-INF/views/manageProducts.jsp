@@ -205,9 +205,11 @@
 
 			<div class="col-xs-12">
 
-				<div style="overflow: auto">
+				<div class = "container-fluid">
 				
-				<table id ="adminProductsTable" class ="table table-striped table-bordered">
+				<div class = "table-responsive">
+				
+										<table id ="adminProductsTable" class ="table table-striped table-bordered">
 
 					<thead>
 
@@ -245,8 +247,14 @@
 
 
 					</tfoot>
-					</table>
+					</table>				
+				
 				</div>
+				
+				</div>
+				
+
+				
 
 			</div>
 

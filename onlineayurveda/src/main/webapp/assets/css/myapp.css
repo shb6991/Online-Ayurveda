@@ -11,6 +11,10 @@ color : #ff0000;
 
 }
 
+.table-responsive{
+	overflow-x: inherit;
+}
+
 html, body{
     font-size: 100%;
 	font-family: 'Open Sans', sans-serif;
