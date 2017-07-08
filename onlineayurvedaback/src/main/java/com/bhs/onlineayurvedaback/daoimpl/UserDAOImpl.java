@@ -3,6 +3,7 @@ package com.bhs.onlineayurvedaback.daoimpl;
 import java.util.List;
 
 import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -18,6 +19,14 @@ public class UserDAOImpl implements UserDAO{
 
 	@Autowired
 	private SessionFactory sessionFactory;
+	
+	@Override
+	public List<User> list() {
+		String selectAllUsers = "FROM User";
+		Query query = sessionFactory.getCurrentSession().createQuery(selectAllUsers, User.class);
+		return query.getResultList();
+
+	}
 	
 
 	@Override
@@ -113,6 +122,39 @@ public class UserDAOImpl implements UserDAO{
 		
 		catch(Exception ex){
 			ex.printStackTrace();
+			return null;
+		}
+	}
+
+
+	@Override
+	public User getById(int userId) {
+		
+		String selectQuery = "FROM User WHERE id = :userId";
+		
+		try{
+			return sessionFactory.getCurrentSession().createQuery(selectQuery, User.class).setParameter("userId", userId).getSingleResult();
+			
+		}
+		catch (Exception ex) {
+		
+			ex.printStackTrace();
+			return null;
+		}
+		
+		
+	}
+
+
+	@Override
+	public Cart getCartById(int cartId) {
+		String selectQuery = "FROM Cart WHERE id = :cartId";
+
+		try {
+			return sessionFactory.getCurrentSession().createQuery(selectQuery, Cart.class).setParameter("cartId",cartId)
+					.getSingleResult();
+		} catch (Exception ex) {
+			 ex.printStackTrace();
 			return null;
 		}
 	}	

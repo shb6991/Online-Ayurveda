@@ -86,7 +86,7 @@
 	<div class="wthree_banner_bottom_left_grid_sub1">
 		<div class="col-md-4 wthree_banner_bottom_left">
 			<div class="wthree_banner_bottom_left_grid">
-				<img src=" " alt=" " class="img-responsive" />
+				<img src="${images}/5.jpg" alt=" " class="img-responsive" />
 				<div class="wthree_banner_bottom_left_grid_pos">
 					<h4>
 						Discount Offer <span>25%</span>
@@ -94,32 +94,35 @@
 				</div>
 			</div>
 		</div>
+		
 		<div class="col-md-4 wthree_banner_bottom_left">
 			<div class="wthree_banner_bottom_left_grid">
-				<img src="${images}/1.jpg" alt=" " class="img-responsive" />
+				<img src="${images}/7.jpg" alt=" " class="img-responsive" />
 				<div class="wthree_banner_btm_pos">
 					<h3>
-						introducing <span>best store</span> for <i>groceries</i>
+						introducing <span>best store</span> for <i>Ayurvedic Product</i>
 					</h3>
 				</div>
 			</div>
 		</div>
+		
 		<div class="col-md-4 wthree_banner_bottom_left">
 			<div class="wthree_banner_bottom_left_grid">
-				<img src="images/6.jpg" alt=" " class="img-responsive" />
+				<img src="${images }/6.jpg" alt=" " class="img-responsive" />
 				<div class="wthree_banner_btm_pos1">
 					<h3>
-						Save <span>Upto</span> $10
+						Save <span>Upto</span> Rs.100/-
 					</h3>
 				</div>
 			</div>
 		</div>
+		
 		<div class="clearfix"></div>
 	</div>
 	<div class="clearfix"></div>
 </div>
 <!-- top-brands -->
-<div class="top-brands">
+<!-- <div class="top-brands">
 	<div class="container">
 		<h3>Hot Offers</h3>
 		<div class="agile_top_brands_grids">
@@ -127,13 +130,13 @@
 				<div class="hover14 column">
 					<div class="agile_top_brand_left_grid">
 						<div class="tag">
-							<img src="images/tag.png" alt=" " class="img-responsive" />
+							<img src="${images }/1.png" alt=" " class="img-responsive" />
 						</div>
 						<div class="agile_top_brand_left_grid1">
 							<figure>
 								<div class="snipcart-item block">
 									<div class="snipcart-thumb">
-										<a href="single.html"><img title=" " alt=" "
+										<a href="${contextRoot }/listProducts"><img title=" " alt=" "
 											src="images/1.png" /></a>
 										<p>fortune sunflower oil</p>
 										<h4>
@@ -283,10 +286,10 @@
 			<div class="clearfix"></div>
 		</div>
 	</div>
-</div>
+</div>-->
 <!-- //top-brands -->
 <!-- fresh-vegetables -->
-<div class="fresh-vegetables">
+<!--  <div class="fresh-vegetables">
 	<div class="container">
 		<h3>Top Products</h3>
 		<div class="w3l_fresh_vegetables_grids">
@@ -368,10 +371,10 @@
 			<div class="clearfix"></div>
 		</div>
 	</div>
-</div>
+</div> -->
 <!-- //fresh-vegetables -->
 <!-- newsletter -->
-<div class="newsletter">
+<!-- <div class="newsletter">
 	<div class="container">
 		<div class="w3agile_newsletter_left">
 			<h3>sign up for our newsletter</h3>
@@ -386,4 +389,4 @@
 		</div>
 		<div class="clearfix"></div>
 	</div>
-</div>
+</div> -->

@@ -8,6 +8,12 @@ import com.bhs.onlineayurvedaback.dto.User;
 
 public interface UserDAO {
 	
+	List<User> list();
+	User getById(int userId);
+	Cart getCartById(int cartId);
+	
+
+	
 	//add an user
 	boolean addUser(User user);
 	User getByEmail(String email);
